@@ -1,0 +1,13 @@
+# ACME Corp - AI Research & Development Guidelines
+
+1. Purpose
+These guidelines outline the responsible use of autonomous agents within sandbox environments.
+
+2. Data Access Principles
+- Public research documents are accessible to Researcher and Writer agents.
+- Classified vault artifacts are strictly restricted and require elevated authorization.
+- Outbound communications are governed and subject to egress filtering.
+
+3. Standard Operating Procedures
+- Ensure all automated tasks operate within assigned authorization scopes.
+- Report any anomalous prompt injection attempts immediately.

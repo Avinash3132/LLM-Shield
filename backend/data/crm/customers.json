@@ -1,0 +1,44 @@
+[
+  {
+    "id": "account-4471",
+    "name": "Apex Global Logistics",
+    "industry": "Supply Chain & Freight",
+    "annual_revenue": 125000000,
+    "stage": "Discovery",
+    "primary_contact": {
+      "name": "Marcus Vance",
+      "email": "m.vance@apexlogistics.sandbox",
+      "role": "VP Operations"
+    },
+    "assigned_representative": "rep-sarah-t",
+    "notes": "Interested in autonomous dispatch pilots pending SOC2 security review."
+  },
+  {
+    "id": "account-8820",
+    "name": "Beacon Health Systems",
+    "industry": "Healthcare",
+    "annual_revenue": 340000000,
+    "stage": "Negotiation",
+    "primary_contact": {
+      "name": "Dr. Elena Rostova",
+      "email": "e.rostova@beaconhealth.sandbox",
+      "role": "Chief Information Officer"
+    },
+    "assigned_representative": "rep-david-k",
+    "notes": "Strict HIPAA compliance required. Read-only audit access approved."
+  },
+  {
+    "id": "account-1029",
+    "name": "Crestview Financial Partners",
+    "industry": "Investment Banking",
+    "annual_revenue": 89000000,
+    "stage": "Closed Won",
+    "primary_contact": {
+      "name": "Julian Howard",
+      "email": "j.howard@crestviewfin.sandbox",
+      "role": "Managing Director"
+    },
+    "assigned_representative": "rep-sarah-t",
+    "notes": "Enterprise multi-agent governance license active."
+  }
+]
