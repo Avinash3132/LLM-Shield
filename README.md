@@ -80,7 +80,9 @@ LLMShield is an interactive cybersecurity platform designed to demonstrate and m
 
 ```powershell
 cd backend
+python -m venv venv
 .\venv\Scripts\activate
+pip install -r requirements.txt
 python run.py
 ```
 
