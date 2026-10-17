@@ -45,23 +45,25 @@ LLMShield is an interactive cybersecurity platform designed to demonstrate and m
 
 ## 2. Adversarial Scenarios Catalog
 
-| Scenario | Code | Target Agent | Attack Vector | Expected Protected Outcome |
-| :--- | :---: | :--- | :--- | :--- |
-| **Indirect Prompt Injection** | **A** | Researcher | Poisoned market brief instructs secret exfil | Blocked at file read & email dispatch |
-| **Privilege Escalation** | **B** | Researcher | Out-of-scope write to CRM account record | Denied by role-based scope check |
-| **Unauthorized Exfiltration** | **C** | Orchestrator | Two-stage read-and-send kill chain | Classified read blocked; outbox remains empty |
-| **Benign Authorized Action** | **D** | Researcher | Legitimate read of public market brief | Authorized and executed normally |
-| **Authorization Failure** | **E** | Publisher | Outage/timeout simulation | Fails secure; tool blocked without fake denial |
+| Scenario                      | Code  | Target Agent | Attack Vector                                | Expected Protected Outcome                     |
+| :---------------------------- | :---: | :----------- | :------------------------------------------- | :--------------------------------------------- |
+| **Indirect Prompt Injection** | **A** | Researcher   | Poisoned market brief instructs secret exfil | Blocked at file read & email dispatch          |
+| **Privilege Escalation**      | **B** | Researcher   | Out-of-scope write to CRM account record     | Denied by role-based scope check               |
+| **Unauthorized Exfiltration** | **C** | Orchestrator | Two-stage read-and-send kill chain           | Classified read blocked; outbox remains empty  |
+| **Benign Authorized Action**  | **D** | Researcher   | Legitimate read of public market brief       | Authorized and executed normally               |
+| **Authorization Failure**     | **E** | Publisher    | Outage/timeout simulation                    | Fails secure; tool blocked without fake denial |
 
 ---
 
 ## 3. Quickstart Guide
 
 ### Prerequisites
+
 - **Node.js**: v18+ (Next.js 16 / React 19)
 - **Python**: 3.11+ (Python 3.14 verified)
 
 ### Configuration
+
 1. Copy the environment configuration:
    ```bash
    cp .env.example .env
@@ -75,18 +77,23 @@ LLMShield is an interactive cybersecurity platform designed to demonstrate and m
 ### Running Locally
 
 #### Terminal 1: Backend (FastAPI on Port 8000)
+
 ```powershell
 cd backend
 .\venv\Scripts\activate
 python run.py
 ```
+
 - API Base: `http://localhost:8000/api`
 - Interactive OpenAPI Docs: `http://localhost:8000/docs`
 
 #### Terminal 2: Frontend (Next.js on Port 3000)
+
 ```powershell
+npm install
 npm run dev
 ```
+
 - Dashboard Console: [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
 - Landing Page: [http://localhost:3000](http://localhost:3000)
 
@@ -98,10 +105,12 @@ All 64 backend unit and integration tests can be run with:
 
 ```powershell
 cd backend
-.\venv\Scripts\python.exe -m pytest tests/ -v
+.\venv\Scripts\activate
+python run.py
 ```
 
 ### Coverage Highlights
+
 - **`test_sandboxes.py`** (15 tests): Path traversal blocking, virtual URI normalization, CRM mutation limits, and local email containment.
 - **`test_mcp_tools.py`** (15 tests): MCP tool schemas, alias resolution, Gemini declarations, and error isolation.
 - **`test_scenarios.py`** (9 tests): Scenarios catalog integrity, lookup models, and `ScenarioEvaluator` metrics.
